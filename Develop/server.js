@@ -1,9 +1,11 @@
+// We bring in the necessary packages and dependencies
 const express = require('express');
 const routes = require('./routes');
 // import sequelize connection
-
 const sequelize = require('./config/connection');
 
+// We define a port, if running locally we use 3001, if running
+// through a web service the port is dynamically assigned.
 const app = express();
 const PORT = process.env.PORT || 3001;
 
