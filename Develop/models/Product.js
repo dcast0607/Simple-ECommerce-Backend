@@ -7,6 +7,16 @@ const sequelize = require('../config/connection');
 class Product extends Model {}
 
 // set up fields and rules for Product model
+
+// Most of what we have done below is fairly straightforward in the sense that
+// we are defining the specific data type, auto-increment, whether it can be
+// null or not, etc... There are a few things to point out. In the "price" and
+// "stock" attributes we are calling a predefined method that lets us validate
+// whether or not the data entered is what we expect to be entered. 
+// Reference: https://sequelize.org/docs/v6/core-concepts/validations-and-constraints/
+
+// The other thing to point out if that we are referencing "Category" as part of this
+// model. 
 Product.init(
   {
     id:{
