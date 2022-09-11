@@ -12,7 +12,7 @@ We've built the application around a few objects; categories, tags, products, an
 - [Usage](#usage)
     - [Getting Started](#getting-started)
     - [Running Applications](#running-the-application)
-    - [Postman Collection/API Requests](#postman-collection-requests)
+    - [Postman Collection/API Requests](#postman-collection-and-api-requests)
 - [Demo](#demo)
 - [Licensing](#licensing)
 - [Contributors](#contributors)
@@ -24,7 +24,7 @@ We've built the application around a few objects; categories, tags, products, an
 
 #### Running the Application
 
-#### Postman Collection/API Requests
+#### Postman Collection and API Requests
 
 ## Demo
 
