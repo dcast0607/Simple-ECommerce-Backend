@@ -28,15 +28,23 @@ If you are working with a database like JAWSDB, you should be able to use that d
 
 For example, if you are working with Heroku you can define these variables under the application settings: </br>
 
-![Declaring Environment Variables](./assets/projectImages/herokuVariables.png "Declaring Environment Variables") </br>
+![Declaring Environment Variables](./Assets/projectImages/herokuVariables.png "Declaring Environment Variables") </br>
 
 If you plan on interacting with this application through a local database, you should also be able to do so, please make sure that you define the appropriate variables on your `.env` file. 
 
 Once you have figured out how you want to utilize your database, please make sure that you install the appropriate dependencies by running the following command: `npm i -y`. </br>
 
-Once you have have installed the appropriate dependencies if you would like to seed data into your database, you can run the following command: `npm run seed`. 
+![Installing Dependencies](./Assets/projectImages/installingPackages.gif "Installing Dependencies") </br>
+
+Once you have have installed the appropriate dependencies if you would like to seed data into your database, you can run the following command: `npm run seed`. </br>
+
+![Configuring Database](./Assets/projectImages/configuringDB.gif "Configuring Database") </br>
 
 #### Running the Application
+
+To start using the API you will need to run the following command: `npm start`. This will let you make requests to the API. Please refer to the API documentation selection below for more information on how to user the API. 
+
+![Running the Application](./Assets/projectImages/runningApplication.gif "Running the Application") </br>
 
 #### Postman Collection and API Requests
 
