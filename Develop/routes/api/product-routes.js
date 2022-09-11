@@ -1,7 +1,10 @@
 // We bring in the necessary packages and dependencies
 const router = require('express').Router();
+const { request } = require('express');
 // We bring in the appropriate models that we will be interacting with.
 const { Product, Category, Tag, ProductTag } = require('../../models');
+
+// Reference docs: https://sequelize.org/docs/v6/core-concepts/assocs/
 
 // The `/api/products` endpoint
 // get all products
@@ -11,7 +14,14 @@ router.get('/', async (req, res) => {
   try {
     console.log("Fetching all products...");
     const productsData = await Product.findAll({
-      include:[{ model: Category}, { model: Tag}]
+      include:[
+        { 
+          model: Category,
+        }, 
+        { 
+          model: Tag,
+        },
+      ]
     });
     res.status(200).json(productsData);
   }
@@ -24,6 +34,23 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
+  try {
+    console.log("Fetching individual product...");
+    const productData = await Product.findByPk(req.params.id, {
+      include: [
+        {
+          model: Category,
+        },
+        {
+          model: Tag,
+        },
+      ]
+    });
+    res.status(200).json(productData);
+  }
+  catch (err) {
+    console.log(err);
+  };
 });
 
 // create new product
@@ -36,7 +63,9 @@ router.post('/', async (req, res) => {
       tagIds: [1, 2, 3, 4]
     }
   */
-  Product.create(req.body)
+
+  try {
+    const createProduct = await Product.create(req.body)
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
       if (req.body.tagIds.length) {
@@ -56,6 +85,10 @@ router.post('/', async (req, res) => {
       console.log(err);
       res.status(400).json(err);
     });
+  }
+  catch (err) {
+    console.log(err);
+  };
 });
 
 // update product
@@ -100,8 +133,19 @@ router.put('/:id', (req, res) => {
     });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
   // delete one product by its `id` value
+  try {
+    const productData = await Product.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.status(200).json(productData);
+  }
+  catch(err) {
+    res.status(400).json(err);
+  }
 });
 
 module.exports = router;
