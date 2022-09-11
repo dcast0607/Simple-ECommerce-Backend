@@ -22,11 +22,31 @@ We've built the application around a few objects; categories, tags, products, an
 
 #### Getting Started
 
+To be able to utilize the application successfully, you will need to ensure that the appropriate package dependencies have been installed and that the database has been linked correctly. 
+
+If you are working with a database like JAWSDB, you should be able to use that database to test our the application. You will just need to ensure that you declare the appropriate variables in your web hosting provider to make sure that you connect correctly to the database. </br>
+
+For example, if you are working with Heroku you can define these variables under the application settings: </br>
+
+![Declaring Environment Variables](./assets/projectImages/herokuVariables.png "Declaring Environment Variables") </br>
+
+If you plan on interacting with this application through a local database, you should also be able to do so, please make sure that you define the appropriate variables on your `.env` file. 
+
+Once you have figured out how you want to utilize your database, please make sure that you install the appropriate dependencies by running the following command: `npm i -y`. </br>
+
+Once you have have installed the appropriate dependencies if you would like to seed data into your database, you can run the following command: `npm run seed`. 
+
 #### Running the Application
 
 #### Postman Collection and API Requests
 
+If you'd like to review the API documentation, please visit our Wiki page. </br>
+
+https://github.com/dcast0607/Simple-ECommerce-Backend/wiki/E-Commerce-Backend-API-Collection
+
 ## Demo
+
+- Full Application Walkthrough: 
 
 ## Licensing
 
