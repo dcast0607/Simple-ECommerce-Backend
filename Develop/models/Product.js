@@ -70,6 +70,7 @@ Product.init(
       defaultValue: 10,
       validate: {
         isNumeric: true,
+        isFloat: true,
       },
     },
     category_id: {
