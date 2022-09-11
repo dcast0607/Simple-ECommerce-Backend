@@ -54,7 +54,7 @@ https://github.com/dcast0607/Simple-ECommerce-Backend/wiki/E-Commerce-Backend-AP
 
 ## Demo
 
-- Full Application Walkthrough: 
+- Full Application Walkthrough: https://www.loom.com/share/4fd2f99aaaed41ac8d656298e611131c
 
 ## Licensing
 
